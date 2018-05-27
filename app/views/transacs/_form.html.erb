@@ -1,0 +1,43 @@
+<%= form_with(model: transac, local: true) do |form| %>
+  <% if transac.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transac.errors.count, "error") %> prohibited this transac from being saved:</h2>
+
+      <ul>
+      <% transac.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div style="width:20%; margin:40px">
+    <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :date %>
+    <%= form.date_select :date, class:"form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :item %>
+    <%= form.select :item, ['1 kilo', '1/2 kilo', '1/4 kilo'], class:"form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, class:"form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :total %>
+    <%= form.text_field :total, class:"form-control"  %>
+  </div>
+
+  <div class="btn-group">
+    <%= form.submit %>
+  </div>
+</div>
+<% end %>

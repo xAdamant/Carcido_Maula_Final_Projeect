@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p style="margin-left:30px; margin-top:50px">
+  <strong>Name:</strong>
+  <%= @transac.name %>
+</p>
+
+<p style="margin-left:30px">
+  <strong>Date:</strong>
+  <%= @transac.date %>
+</p>
+
+<p style="margin-left:30px">
+  <strong>Item:</strong>
+  <%= @transac.item %>
+</p>
+
+<p style="margin-left:30px">
+  <strong>Quantity:</strong>
+  <%= @transac.quantity %>
+</p>
+
+<p style="margin-left:30px">
+  <strong>Total:</strong>
+  <%= @transac.total %>
+</p>
+
+<h5 style="margin-left:30px"><%= link_to 'Edit', edit_transac_path(@transac) %> |
+<%= link_to 'Back', transacs_path %></h5>
